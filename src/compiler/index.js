@@ -4,4 +4,4 @@ import grammar from './grammar';
 const parser = new Parser(grammar);
 // const parserSource = parser.generate();
 
-console.log(parser.parse('1 + 1'));
+console.log(parser.parse('function + 1 + 1'));

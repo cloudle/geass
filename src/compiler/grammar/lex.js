@@ -6,7 +6,7 @@ const rules = [
 	["-",																			"return '-'"],
 	["\\+",																		"return '+'"],
 	["\\^",																		"return '^'"],
-	// ["!",																			"return '!'"],
+	["!",																			"return '!'"],
 	["%",																			"return '%'"],
 	["\\(",																		"return '('"],
 	["\\)",																		"return ')'"],

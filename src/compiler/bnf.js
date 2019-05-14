@@ -21,8 +21,6 @@ function p(patternString, action, options) {
 		actionString = `$$ = ${action}`;
 	}
 
-	console.log(actionString);
-
 	return [patternString, actionString, options];
 }
 

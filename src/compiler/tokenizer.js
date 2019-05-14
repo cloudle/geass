@@ -1,3 +1,19 @@
+import JisonLex from 'jison-lex';
+
+export default function(source) {
+	const tokens = [];
+	let tag = '';
+	lexer.setInput(source);
+
+	while (true) {
+		const tag = lexer.lex();
+		tokens.push([tag, lexer.yytext, lexer.yylloc]);
+		if (tag === 'EOF') break;
+	}
+
+	return tokens;
+}
+
 const rules = [
 	["\\s+",																	"/* ignore */"],
 	["[0-9]+(?:\\.[0-9]+)?\\b",								"return 'NUMBER'"],
@@ -30,6 +46,4 @@ const rules = [
 	["$",																			"return 'EOF'"],
 ];
 
-export default {
-	rules,
-};
+const lexer = new JisonLex({ rules });
